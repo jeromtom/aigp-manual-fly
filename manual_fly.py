@@ -58,9 +58,9 @@ def main():
     ap = argparse.ArgumentParser(
         description="Manual MAVLink flight for the AI-GP FlightSim (TRAINING only)")
     ap.add_argument("--port", type=int, default=14550, help="local UDP port to bind (default 14550)")
-    ap.add_argument("--rate-roll", type=float, default=70.0, help="max roll deg/s at full stick (racing: 540)")
-    ap.add_argument("--rate-pitch", type=float, default=70.0, help="max pitch deg/s at full stick (racing: 540)")
-    ap.add_argument("--rate-yaw", type=float, default=50.0, help="max yaw deg/s at full stick (racing: 360)")
+    ap.add_argument("--rate-roll", type=float, default=35.0, help="max roll deg/s at full stick (racing: 540)")
+    ap.add_argument("--rate-pitch", type=float, default=35.0, help="max pitch deg/s at full stick (racing: 540)")
+    ap.add_argument("--rate-yaw", type=float, default=25.0, help="max yaw deg/s at full stick (racing: 360)")
     ap.add_argument("--rate-rp", type=float, default=None, help="set roll AND pitch together")
     ap.add_argument("--expo", type=float, default=0.45, help="stick expo 0..0.8 (more = softer center)")
     ap.add_argument("--deadband", type=float, default=0.06, help="stick deadband")
