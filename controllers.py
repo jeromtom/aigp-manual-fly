@@ -117,7 +117,6 @@ class PygameBackend:
         if count == 0:
             raise RuntimeError("no joystick detected")
         self.js = pygame.joystick.Joystick(index if index is not None else 0)
-        self.js.init()
         self.name = self.js.get_name()
         try:
             self.key = self.js.get_guid()
@@ -134,7 +133,6 @@ class PygameBackend:
         out = []
         for i in range(pygame.joystick.get_count()):
             js = pygame.joystick.Joystick(i)
-            js.init()
             out.append((i, js.get_name(), js.get_numaxes(), js.get_numbuttons()))
         return out
 
