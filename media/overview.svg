@@ -67,5 +67,5 @@
 
   <!-- footer warning -->
   <rect x="28" y="408" width="804" height="38" rx="8" fill="#2d1a05" stroke="#d29922"/>
-  <text x="430" y="432" text-anchor="middle" font-size="13" fill="#d29922" font-weight="bold">⚠ TRAINING events only — human input in a submitted timed run is an immediate DSQ</text>
+  <text x="430" y="432" text-anchor="middle" font-size="13" fill="#d29922" font-weight="bold">⚠ TRAINING events only: human input in a submitted timed run is an immediate DSQ</text>
 </svg>
