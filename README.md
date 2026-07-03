@@ -88,6 +88,12 @@ If you're new, start with throttle+yaw hovers, then small pitch/roll taps.
 - **"Sim connected" never appears**: start the bridge *before* clicking into the
   event, and make sure nothing else is bound to UDP 14550.
 
+## Community
+
+Join the **AIGP Paddock** — the unofficial Discord for AI Grand Prix participants.
+Tips, course lines, setup help, and post-race chat:
+**[discord.gg/kBrhdManb6](https://discord.gg/kBrhdManb6)** · [ai-gp-paddock.rexindynamics.com](https://ai-gp-paddock.rexindynamics.com)
+
 ## License
 
 MIT — see [LICENSE](LICENSE). Not affiliated with the AI Grand Prix organizers;
