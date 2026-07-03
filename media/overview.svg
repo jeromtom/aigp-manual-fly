@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="860" height="470" viewBox="0 0 860 470" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#161b22"/>
+      <stop offset="1" stop-color="#0d1117"/>
+    </linearGradient>
+    <marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L6,3 L0,6 z" fill="#8b949e"/>
+    </marker>
+  </defs>
+
+  <!-- card -->
+  <rect x="1" y="1" width="858" height="468" rx="12" fill="url(#bg)" stroke="#30363d"/>
+
+  <!-- terminal chrome -->
+  <rect x="1" y="1" width="858" height="34" rx="12" fill="#21262d"/>
+  <rect x="1" y="23" width="858" height="12" fill="#21262d"/>
+  <circle cx="24" cy="18" r="6" fill="#ff5f56"/>
+  <circle cx="44" cy="18" r="6" fill="#ffbd2e"/>
+  <circle cx="64" cy="18" r="6" fill="#27c93f"/>
+  <text x="430" y="23" text-anchor="middle" font-size="13" fill="#8b949e">fly_manual.bat — aigp-manual-fly</text>
+
+  <!-- terminal output (real bridge messages) -->
+  <g font-size="14">
+    <text x="28" y="66" fill="#e6edf3"><tspan fill="#7ee787">$</tspan> fly_manual.bat</text>
+    <text x="28" y="92" fill="#e6edf3">Controller: <tspan fill="#79c0ff">Radiomaster TX16S Joystick</tspan>   [pygame]</text>
+    <text x="28" y="115" fill="#8b949e">Rates deg/s: roll 140 / pitch 140 / yaw 100   expo 0.45   max thrust 1.0</text>
+    <text x="28" y="141" fill="#e6edf3">Listening on udp 127.0.0.1:14550 — start FlightSim and select a <tspan fill="#d29922" font-weight="bold">TRAINING</tspan> event...</text>
+    <text x="28" y="164" fill="#e6edf3">Sim connected (system 1). Click RACE; after GO, press your enable button (or 'a').</text>
+    <text x="28" y="190" fill="#7ee787" font-weight="bold">&gt;&gt;&gt; CONTROL ENABLED</text>
+    <text x="28" y="213" fill="#e6edf3">[<tspan fill="#7ee787">FLY</tspan>]  thr  0.42  roll +0.10  pitch -0.05  yaw +0.00</text>
+  </g>
+
+  <!-- divider -->
+  <line x1="28" y1="242" x2="832" y2="242" stroke="#30363d"/>
+  <text x="28" y="268" font-size="12" fill="#8b949e" letter-spacing="2">HOW IT WORKS</text>
+
+  <!-- flow diagram -->
+  <g font-size="13">
+    <!-- controller box -->
+    <rect x="28" y="288" width="180" height="96" rx="8" fill="#0d1117" stroke="#30363d"/>
+    <text x="118" y="318" text-anchor="middle" fill="#e6edf3" font-size="22">🎮</text>
+    <text x="118" y="344" text-anchor="middle" fill="#e6edf3">RC transmitter,</text>
+    <text x="118" y="364" text-anchor="middle" fill="#e6edf3">gamepad or stick</text>
+
+    <!-- arrow 1 -->
+    <line x1="208" y1="336" x2="288" y2="336" stroke="#8b949e" stroke-width="1.5" marker-end="url(#arr)"/>
+    <text x="248" y="326" text-anchor="middle" fill="#8b949e" font-size="11">USB HID axes</text>
+
+    <!-- bridge box -->
+    <rect x="292" y="288" width="230" height="96" rx="8" fill="#0d1117" stroke="#388bfd"/>
+    <text x="407" y="316" text-anchor="middle" fill="#79c0ff" font-weight="bold">manual_fly.py</text>
+    <text x="407" y="340" text-anchor="middle" fill="#e6edf3">expo → rates → arm gate</text>
+    <text x="407" y="362" text-anchor="middle" fill="#8b949e" font-size="11">calibration profiles per device</text>
+
+    <!-- arrow 2 -->
+    <line x1="522" y1="336" x2="640" y2="336" stroke="#8b949e" stroke-width="1.5" marker-end="url(#arr)"/>
+    <text x="581" y="318" text-anchor="middle" fill="#8b949e" font-size="11">SET_ATTITUDE_TARGET</text>
+    <text x="581" y="332" text-anchor="middle" fill="#8b949e" font-size="11">50 Hz · udp 14550</text>
+
+    <!-- sim box -->
+    <rect x="644" y="288" width="188" height="96" rx="8" fill="#0d1117" stroke="#30363d"/>
+    <text x="738" y="318" text-anchor="middle" fill="#e6edf3" font-size="22">🚁</text>
+    <text x="738" y="344" text-anchor="middle" fill="#e6edf3">AI Grand Prix</text>
+    <text x="738" y="364" text-anchor="middle" fill="#e6edf3">FlightSim</text>
+  </g>
+
+  <!-- footer warning -->
+  <rect x="28" y="408" width="804" height="38" rx="8" fill="#2d1a05" stroke="#d29922"/>
+  <text x="430" y="432" text-anchor="middle" font-size="13" fill="#d29922" font-weight="bold">⚠ TRAINING events only — human input in a submitted timed run is an immediate DSQ</text>
+</svg>

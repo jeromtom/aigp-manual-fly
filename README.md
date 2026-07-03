@@ -1,7 +1,15 @@
 # aigp-manual-fly
 
+[![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
+[![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-blue.svg)](https://www.python.org/)
+[![Platform: Windows](https://img.shields.io/badge/platform-Windows-0078d4.svg)](#setup)
+
 Fly the **AI Grand Prix FlightSim by hand** — with an RC transmitter, gamepad, or
 flight stick — over the same local MAVLink interface your autonomous pilot uses.
+
+<p align="center">
+  <img src="media/overview.svg" alt="aigp-manual-fly: your stick's axes go through expo, rate scaling and an arm gate in manual_fly.py, out as 50 Hz SET_ATTITUDE_TARGET over localhost UDP 14550 into the FlightSim" width="860">
+</p>
 
 Great for getting a feel for the drone's dynamics, scouting a course line before
 writing a planner, or just having fun on the training tracks.
@@ -17,7 +25,7 @@ writing a planner, or just having fun on the training tracks.
 Requires Windows (the sim is Windows-only) and Python 3.10+.
 
 ```bat
-git clone <this repo>
+git clone https://github.com/jeromtom/aigp-manual-fly.git
 cd aigp-manual-fly
 fly_manual.bat --setup      # one-time: creates venv, installs deps, runs stick calibration
 ```
